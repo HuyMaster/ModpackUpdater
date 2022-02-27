@@ -65,12 +65,10 @@ public class fileReader {
 						fileAction.process(fn, act, (i + 1));
 					}
 				}
-				System.out.println("Work done");
-				System.out.println("Deleting unused file");
-				sleep.sleep(5);
-				fileDestroy.delDir(System.getProperty("user.home") + "\\Desktop\\packer");
 			}
 		} catch (Exception e) {
 		}
+		fileDestroy.delDir(System.getProperty("user.home") + "\\Desktop\\packer");
+		sleep.sleep(5);
 	}
 }

@@ -43,6 +43,7 @@ public class fileAction {
 			Files.move(sourcePath, destPath, StandardCopyOption.REPLACE_EXISTING);
 		} catch (IOException e) {
 			System.err.println("Error while access file");
+			e.printStackTrace();
 		}
 		System.out.println("=============================================================");
 		sleep.sleep(1);
@@ -56,6 +57,7 @@ public class fileAction {
 			Files.delete(destPath);
 		} catch (IOException e) {
 			System.err.println("Error while access file");
+			e.printStackTrace();
 		}
 		System.out.println("=============================================================");
 		sleep.sleep(1);
