@@ -1,3 +1,4 @@
 # ModpackUpdater
 This program is modpack updater
-[Release]
+
+[Release](https://github.com/HuyMaster/ModpackUpdater/releases)
