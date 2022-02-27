@@ -7,6 +7,8 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 
+import root.utilities.sleep;
+
 public class fileAction {
 	private static final Path modPath = Paths.get((System.getProperty("user.home")) + "\\AppData\\Roaming\\.minecraft\\mods");
 	/**
@@ -43,6 +45,7 @@ public class fileAction {
 			System.err.println("Error while access file");
 		}
 		System.out.println("=============================================================");
+		sleep.sleep(1);
 	}
 	
 	private void remove(String filename, Object line, Object action) {
@@ -55,5 +58,6 @@ public class fileAction {
 			System.err.println("Error while access file");
 		}
 		System.out.println("=============================================================");
+		sleep.sleep(1);
 	}
 }

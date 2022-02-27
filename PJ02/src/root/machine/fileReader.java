@@ -5,6 +5,8 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
+import root.utilities.sleep;
+
 public class fileReader {
 	public static final String filepath = System.getProperty("user.home") + "\\Desktop\\pack_of_file\\key";
 	public static void Main() {
@@ -30,6 +32,7 @@ public class fileReader {
 			System.out.println("");
 			System.err.println("\t/ / / / File 'key' not found / / / /\n");
 			System.out.println("");
+			sleep.sleep(5);
 		}
 		catch (IOException e) {
 			System.err.println("Can't access to file\n");
@@ -58,12 +61,16 @@ public class fileReader {
 							}
 						}
 						fileAction fileAction = new fileAction();
+						sleep.sleep(1);
 						fileAction.process(fn, act, (i + 1));
 					}
 				}
+				System.out.println("Work done");
+				System.out.println("Deleting unused file");
+				sleep.sleep(5);
+				fileDestroy.delDir(System.getProperty("user.home") + "\\Desktop\\pack_of_file");
 			}
 		} catch (Exception e) {
 		}
-		fileDestroy.delDir(System.getProperty("user.home") + "\\Desktop\\pack_of_file");
 	}
 }

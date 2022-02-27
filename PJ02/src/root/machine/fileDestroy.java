@@ -2,6 +2,8 @@ package root.machine;
 
 import java.io.File;
 
+import root.utilities.sleep;
+
 public class fileDestroy {
 	public static boolean delDir(File path) {
 		if (path.isDirectory()) {
@@ -11,6 +13,7 @@ public class fileDestroy {
 	            if (!success) {
 	               return success;
 	            }
+	            sleep.sleep(1);
 			}
 		}
 		return path.delete();
@@ -24,6 +27,7 @@ public class fileDestroy {
 	            if (!success) {
 	               return success;
 	            }
+	            sleep.sleep(1);
 			}
 		}
 		return path.delete();
