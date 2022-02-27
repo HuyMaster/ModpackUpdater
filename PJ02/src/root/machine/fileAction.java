@@ -37,7 +37,7 @@ public class fileAction {
 	private void add(String filename, Object line, Object action) {
 		System.out.println("=============================================================");
 		System.out.printf("Line %s: Start %s " + filename + " to mods dir\n", line, action);
-		Path sourcePath = Paths.get(System.getProperty("user.home") + "\\Desktop\\pack_of_file\\" + filename);
+		Path sourcePath = Paths.get(System.getProperty("user.home") + "\\Desktop\\packer\\" + filename);
 		Path destPath = Paths.get(modPath + "\\" + filename);
 		try {
 			Files.move(sourcePath, destPath, StandardCopyOption.REPLACE_EXISTING);

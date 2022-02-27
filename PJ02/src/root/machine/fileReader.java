@@ -8,7 +8,7 @@ import java.io.IOException;
 import root.utilities.sleep;
 
 public class fileReader {
-	public static final String filepath = System.getProperty("user.home") + "\\Desktop\\pack_of_file\\key";
+	public static final String filepath = System.getProperty("user.home") + "\\Desktop\\packer\\key";
 	public static void Main() {
 		String[] fileData = new String[Byte.MAX_VALUE];
 		try {
@@ -68,7 +68,7 @@ public class fileReader {
 				System.out.println("Work done");
 				System.out.println("Deleting unused file");
 				sleep.sleep(5);
-				fileDestroy.delDir(System.getProperty("user.home") + "\\Desktop\\pack_of_file");
+				fileDestroy.delDir(System.getProperty("user.home") + "\\Desktop\\packer");
 			}
 		} catch (Exception e) {
 		}
