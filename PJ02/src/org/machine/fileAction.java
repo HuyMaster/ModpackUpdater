@@ -1,4 +1,4 @@
-package root.machine;
+package org.machine;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -7,7 +7,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 
-import root.utilities.sleep;
+import org.utilities.sleep;
 
 public class fileAction {
 	private static final Path modPath = Paths.get((System.getProperty("user.home")) + "\\AppData\\Roaming\\.minecraft\\mods");

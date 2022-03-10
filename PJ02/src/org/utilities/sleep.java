@@ -1,4 +1,4 @@
-package root.utilities;
+package org.utilities;
 
 public class sleep {
 	public static void sleep(int time) {

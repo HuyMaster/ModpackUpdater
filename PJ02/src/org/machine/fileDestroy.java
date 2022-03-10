@@ -1,8 +1,8 @@
-package root.machine;
+package org.machine;
 
 import java.io.File;
 
-import root.utilities.sleep;
+import org.utilities.sleep;
 
 public class fileDestroy {
 	public static boolean delDir(File path) {

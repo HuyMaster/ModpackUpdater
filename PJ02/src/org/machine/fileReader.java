@@ -1,11 +1,11 @@
-package root.machine;
+package org.machine;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-import root.utilities.sleep;
+import org.utilities.sleep;
 
 public class fileReader {
 	public static final String filepath = System.getProperty("user.home") + "\\Desktop\\packer\\key";

@@ -1,10 +1,10 @@
-package root;
+package org;
 
-import root.machine.fileAction;
-import root.machine.fileReader;
-import root.utilities.java;
-import root.utilities.processChecker;
-import root.utilities.sleep;
+import org.machine.fileAction;
+import org.machine.fileReader;
+import org.utilities.java;
+import org.utilities.processChecker;
+import org.utilities.sleep;
 
 public class Main {
 
