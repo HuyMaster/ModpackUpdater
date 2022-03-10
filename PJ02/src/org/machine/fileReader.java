@@ -6,6 +6,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 import org.utilities.sleep;
+import org.window.Dialog;
 
 public class fileReader {
 	public static final String filepath = System.getProperty("user.home") + "\\Desktop\\packer\\key";
@@ -29,13 +30,11 @@ public class fileReader {
 				}
 			}
 		} catch (FileNotFoundException e) {
-			System.out.println("");
-			System.err.println("\t/ / / / File 'key' not found / / / /\n");
-			System.out.println("");
+			Dialog.Message("Kh\u00F4ng t\u00ECm th\u1EA5y file ch\u1EC9 d\u1EABn c\u00E0i \u0111\u1EB7t\nH\u1ECFi ch\u1EE7 ch\u01B0\u01A1ng tr\u00ECnh \u0111\u1EC3 bi\u1EBFt th\u00EAm", "Th\u00F4ng b\u00E1o", 0);
 			sleep.sleep(0);
 		}
 		catch (IOException e) {
-			System.err.println("Can't access to file\n");
+			Dialog.Message("L\u1ED7i khi truy nh\u1EADp t\u1EC7p", "Th\u00F4ng b\u00E1o", 0);
 		}
 		char comma = ',';
 		String cache = null;

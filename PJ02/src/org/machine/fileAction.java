@@ -8,6 +8,7 @@ import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 
 import org.utilities.sleep;
+import org.window.Dialog;
 
 public class fileAction {
 	private static final Path modPath = Paths.get((System.getProperty("user.home")) + "\\AppData\\Roaming\\.minecraft\\mods");
@@ -42,8 +43,7 @@ public class fileAction {
 		try {
 			Files.move(sourcePath, destPath, StandardCopyOption.REPLACE_EXISTING);
 		} catch (IOException e) {
-			System.err.println("Error while access file");
-			e.printStackTrace();
+			Dialog.Message("L\u1ED7i khi truy nh\u1EADp t\u1EC7p", "Th\u00F4ng b\u00E1o", 0);
 		}
 		System.out.println("=============================================================");
 		sleep.sleep(1);
@@ -56,8 +56,7 @@ public class fileAction {
 		try {
 			Files.delete(destPath);
 		} catch (IOException e) {
-			System.err.println("Error while access file");
-			e.printStackTrace();
+			Dialog.Message("L\u1ED7i khi truy nh\u1EADp t\u1EC7p", "Th\u00F4ng b\u00E1o", 0);
 		}
 		System.out.println("=============================================================");
 		sleep.sleep(1);
