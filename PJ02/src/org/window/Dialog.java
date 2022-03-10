@@ -11,5 +11,6 @@ public class Dialog {
 		JFrame frame = new JFrame();
 		frame.setAlwaysOnTop(true);
 		JOptionPane.showMessageDialog(frame, message, title, icon);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 }

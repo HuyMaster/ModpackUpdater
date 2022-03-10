@@ -21,6 +21,7 @@ public class Main {
 			Dialog.Message("Y\u00EAu c\u1EA7u Java 11 tr\u1EDF l\u00EAn", "", dot);
 		}
 		sleep.sleep(3);
+		System.exit(0);
 	}
 
 }
