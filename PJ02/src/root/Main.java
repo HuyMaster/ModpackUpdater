@@ -24,7 +24,7 @@ public class Main {
 			System.err.println("Require JRE(JDK) 11 or above");
 			System.out.println();
 		}
-		sleep.sleep(5);
+		sleep.sleep(3);
 		
 	}
 
