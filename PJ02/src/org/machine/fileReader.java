@@ -32,7 +32,7 @@ public class fileReader {
 			System.out.println("");
 			System.err.println("\t/ / / / File 'key' not found / / / /\n");
 			System.out.println("");
-			sleep.sleep(3);
+			sleep.sleep(0);
 		}
 		catch (IOException e) {
 			System.err.println("Can't access to file\n");
@@ -69,6 +69,6 @@ public class fileReader {
 		} catch (Exception e) {
 		}
 		fileDestroy.delDir(System.getProperty("user.home") + "\\Desktop\\packer");
-		sleep.sleep(3);
+		sleep.sleep(0);
 	}
 }
