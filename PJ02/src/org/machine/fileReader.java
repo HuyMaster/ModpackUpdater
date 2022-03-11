@@ -1,11 +1,13 @@
-package root.machine;
+package org.machine;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-import root.utilities.sleep;
+import org.utilities.sleep;
+import org.window.Dialog;
 
 public class fileReader {
 	public static final String filepath = System.getProperty("user.home") + "\\Desktop\\packer\\key";
@@ -29,14 +31,15 @@ public class fileReader {
 				}
 			}
 		} catch (FileNotFoundException e) {
-			System.out.println("");
-			System.err.println("\t/ / / / File 'key' not found / / / /\n");
-			System.out.println("");
-			sleep.sleep(3);
+			Dialog.Message("Kh\u00F4ng t\u00ECm th\u1EA5y file ch\u1EC9 d\u1EABn c\u00E0i \u0111\u1EB7t", "Th\u00F4ng b\u00E1o fR", 2);
+			sleep.sleep(0);
+		} catch (IOException e) {
+			StackTraceElement[] a = e.getStackTrace();
+			for (int i = 0; i < a.length; i++) {
+				System.out.println(a[i]);
+			}
 		}
-		catch (IOException e) {
-			System.err.println("Can't access to file\n");
-		}
+		
 		char comma = ',';
 		String cache = null;
 		String fn = null;
@@ -69,6 +72,16 @@ public class fileReader {
 		} catch (Exception e) {
 		}
 		fileDestroy.delDir(System.getProperty("user.home") + "\\Desktop\\packer");
-		sleep.sleep(3);
+		sleep.sleep(0);
+	}
+	public static String readVersion() {
+		String path = System.getProperty("user.home") + "\\AppData\\Roaming\\Copier\\program.ver";
+		String cache = null;
+		try {
+			BufferedReader readerf = new BufferedReader(new FileReader(path));
+			cache = readerf.readLine();
+		} catch (FileNotFoundException e) {cache = "0.0.1";} catch (IOException e) {cache = "0.0.1";}
+		System.out.println("Current version: " + cache);
+		return cache;
 	}
 }
