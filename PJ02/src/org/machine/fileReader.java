@@ -1,6 +1,7 @@
 package org.machine;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -74,12 +75,13 @@ public class fileReader {
 		sleep.sleep(0);
 	}
 	public static String readVersion() {
-		String path = System.getProperty("userhome") + "\\AppData\\Roaming\\Copier\\program.ver";
+		String path = System.getProperty("user.home") + "\\AppData\\Roaming\\Copier\\program.ver";
 		String cache = null;
 		try {
 			BufferedReader readerf = new BufferedReader(new FileReader(path));
 			cache = readerf.readLine();
 		} catch (FileNotFoundException e) {cache = "0.0.1";} catch (IOException e) {cache = "0.0.1";}
+		System.out.println("Current version: " + cache);
 		return cache;
 	}
 }
