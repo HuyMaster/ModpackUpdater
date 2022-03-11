@@ -73,4 +73,13 @@ public class fileReader {
 		fileDestroy.delDir(System.getProperty("user.home") + "\\Desktop\\packer");
 		sleep.sleep(0);
 	}
+	public static String readVersion() {
+		String path = System.getProperty("userhome") + "\\AppData\\Roaming\\Copier\\program.ver";
+		String cache = null;
+		try {
+			BufferedReader readerf = new BufferedReader(new FileReader(path));
+			cache = readerf.readLine();
+		} catch (FileNotFoundException e) {cache = "0.0.1";} catch (IOException e) {cache = "0.0.1";}
+		return cache;
+	}
 }
