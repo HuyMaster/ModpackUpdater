@@ -30,12 +30,15 @@ public class fileReader {
 				}
 			}
 		} catch (FileNotFoundException e) {
-			Dialog.Message("Kh\u00F4ng t\u00ECm th\u1EA5y file ch\u1EC9 d\u1EABn c\u00E0i \u0111\u1EB7t\nH\u1ECFi ch\u1EE7 ch\u01B0\u01A1ng tr\u00ECnh \u0111\u1EC3 bi\u1EBFt th\u00EAm", "Th\u00F4ng b\u00E1o", 2);
+			Dialog.Message("Kh\u00F4ng t\u00ECm th\u1EA5y file ch\u1EC9 d\u1EABn c\u00E0i \u0111\u1EB7t", "Th\u00F4ng b\u00E1o fR", 2);
 			sleep.sleep(0);
+		} catch (IOException e) {
+			StackTraceElement[] a = e.getStackTrace();
+			for (int i = 0; i < a.length; i++) {
+				System.out.println(a[i]);
+			}
 		}
-		catch (IOException e) {
-			Dialog.Message("L\u1ED7i khi truy nh\u1EADp t\u1EC7p", "Th\u00F4ng b\u00E1o", 0);
-		}
+		
 		char comma = ',';
 		String cache = null;
 		String fn = null;

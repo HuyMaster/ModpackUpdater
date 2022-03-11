@@ -43,7 +43,7 @@ public class fileAction {
 		try {
 			Files.move(sourcePath, destPath, StandardCopyOption.REPLACE_EXISTING);
 		} catch (IOException e) {
-			Dialog.Message("Line " + line + ":L\u1ED7i khi truy nh\u1EADp t\u1EC7p", "Th\u00F4ng b\u00E1o", 0);
+			Dialog.Message("L\u1ED7i khi truy nh\u1EADp t\u1EC7p\n" + filename, "Th\u00F4ng b\u00E1o fA", 0);
 		}
 		System.out.println("=============================================================");
 		sleep.sleep(1);
@@ -56,7 +56,7 @@ public class fileAction {
 		try {
 			Files.delete(destPath);
 		} catch (IOException e) {
-			Dialog.Message("Line " + line + ":L\u1ED7i khi truy nh\u1EADp t\u1EC7p", "Th\u00F4ng b\u00E1o", 0);
+			Dialog.Message("L\u1ED7i khi truy nh\u1EADp t\u1EC7p\n" + filename, "Th\u00F4ng b\u00E1o fA", 0);
 		}
 		System.out.println("=============================================================");
 		sleep.sleep(1);
