@@ -1,5 +1,6 @@
 package org;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 
@@ -26,11 +27,14 @@ public class Main {
 					+ "T\u1EA3i v\u00E0 c\u00E0i \u0111\u1EB7t b\u1EA3n m\u1EDBi nh\u1EA5t ?", "Th\u00F4ng b\u00E1o", 2, button);
 			if (click == 0) {
 				try {
-					//Runtime.getRuntime().exec("rundll32 url.dll,FileProtocolHandler " + url);
+					String fileDwn = System.getProperty("user.home") + "\\AppData\\Roaming\\Copier\\setup.zip",
+							fileUnzDir = System.getProperty("user.home") + "\\AppData\\Roaming\\Copier";
+					File f1 = new File(fileDwn), f2 = new File(fileUnzDir + "\\setup.exe");
 					URL gurl = UrlGet.start();
-					fileDownloader.start(gurl, System.getProperty("user.home") + "\\AppData\\Roaming\\Copier\\setup.zip");
-					Unzip.start(System.getProperty("user.home") + "\\AppData\\Roaming\\Copier\\setup.zip", System.getProperty("user.home") + "\\AppData\\Roaming\\Copier\\unzip");
-					Runtime.getRuntime().exec(System.getProperty("user.home") + "\\AppData\\Roaming\\Copier\\unzip\\setup.exe");
+					fileDownloader.start(gurl, fileDwn);
+					Unzip.start(fileDwn, fileUnzDir);
+					f1.delete();
+					Runtime.getRuntime().exec(f2.toString());
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
