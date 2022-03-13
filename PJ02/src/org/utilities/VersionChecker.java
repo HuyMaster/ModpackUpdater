@@ -48,7 +48,6 @@ public class VersionChecker {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		System.out.printf("Lastest verion: %s.%s.%s\n", maj, mino, bugf);
 		String localver =  fileReader.readVersion();
 		int[] lver = {
 				Integer.parseInt(localver.substring(0, localver.indexOf('.'))),
@@ -68,7 +67,6 @@ public class VersionChecker {
 				}
 			}
 		}
-		System.out.println(OldVersion);
 		return OldVersion;
 	}
 }

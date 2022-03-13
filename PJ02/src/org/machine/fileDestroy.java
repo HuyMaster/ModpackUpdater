@@ -13,7 +13,6 @@ public class fileDestroy {
 	            if (!success) {
 	               return success;
 	            }
-	            sleep.sleep(1);
 			}
 		}
 		return path.delete();
@@ -27,7 +26,6 @@ public class fileDestroy {
 	            if (!success) {
 	               return success;
 	            }
-	            sleep.sleep(1);
 			}
 		}
 		return path.delete();

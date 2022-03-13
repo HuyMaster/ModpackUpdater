@@ -12,6 +12,7 @@ import org.window.Dialog;
 public class fileReader {
 	public static final String filepath = System.getProperty("user.home") + "\\Desktop\\packer\\key";
 	public static void Main() {
+		sleep.sleep(1);
 		String[] fileData = new String[Byte.MAX_VALUE];
 		try {
 			BufferedReader file = new BufferedReader(new FileReader(filepath));
@@ -27,17 +28,13 @@ public class fileReader {
 					}
 				} else {
 					file.close();
-					System.out.println("BufferedReader closed");
+					System.out.println("\t> BufferedReader closed");
 				}
 			}
 		} catch (FileNotFoundException e) {
 			Dialog.Message("Kh\u00F4ng t\u00ECm th\u1EA5y file ch\u1EC9 d\u1EABn c\u00E0i \u0111\u1EB7t", "Th\u00F4ng b\u00E1o fR", 2);
 			sleep.sleep(0);
 		} catch (IOException e) {
-			StackTraceElement[] a = e.getStackTrace();
-			for (int i = 0; i < a.length; i++) {
-				System.out.println(a[i]);
-			}
 		}
 		
 		char comma = ',';
@@ -81,7 +78,10 @@ public class fileReader {
 			BufferedReader readerf = new BufferedReader(new FileReader(path));
 			cache = readerf.readLine();
 		} catch (FileNotFoundException e) {cache = "0.0.1";} catch (IOException e) {cache = "0.0.1";}
-		System.out.println("Current version: " + cache);
 		return cache;
+	}
+	public static String getUrl() {
+		
+		return null;
 	}
 }
